@@ -69,5 +69,5 @@ If using the GPU Version, run ::
 
 Result ::
 
-    {'success': True, 'confidence': 73.73981, 'label': 'conference_room'}
+    {'success': True, 'confidence': 0.7373981, 'label': 'conference_room'}
 

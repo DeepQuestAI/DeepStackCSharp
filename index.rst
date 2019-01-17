@@ -61,10 +61,10 @@ Below, using DeepStack we attempt to classify the scene of the above image ::
 
 **Result**  ::
 
-    {'label': 'highway', 'confidence': 63.377846, 'success': True}
+    {'label': 'highway', 'confidence': 0.63377846, 'success': True}
 
 You simply send in an image by POST and deepstack returns a JSON response detailing the label of 
-the image as well as the confidence of the prediction on a scale of 1 - 100.
+the image as well as the confidence of the prediction on a scale of 0 - 1.
 
 
 **Installing DeepStack**

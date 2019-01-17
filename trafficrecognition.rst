@@ -81,4 +81,4 @@ If using the GPU Version, run ::
 
 Result ::
 
-    {'success': True, 'confidence': 94.88776, 'label': 'accident'}
+    {'success': True, 'confidence': 0.9488776, 'label': 'accident'}

@@ -85,7 +85,7 @@ Result ::
     male
     male
     female
-    {'predictions': [{'y_max': 303, 'gender': 'female', 'confidence': 100, 'x_min': 534, 'x_max': 629, 'y_min': 174}, {'y_max': 275, 'gender': 'male', 'confidence': 99, 'x_min': 616, 'x_max': 711, 'y_min': 146}, {'y_max': 259, 'gender': 'male', 'confidence': 98, 'x_min': 729, 'x_max': 811, 'y_min': 147}, {'y_max': 290, 'gender': 'female', 'confidence': 99, 'x_min': 471, 'x_max': 549, 'y_min': 190}], 'success': True}
+    {'predictions': [{'y_max': 303, 'gender': 'female', 'confidence': 0.99999213, 'x_min': 534, 'x_max': 629, 'y_min': 174}, {'y_max': 275, 'gender': 'male', 'confidence': 0.6611953, 'x_min': 616, 'x_max': 711, 'y_min': 146}, {'y_max': 259, 'gender': 'male', 'confidence': 0.99884146, 'x_min': 729, 'x_max': 811, 'y_min': 147}, {'y_max': 290, 'gender': 'female', 'confidence': 0.99997365, 'x_min': 471, 'x_max': 549, 'y_min': 190}], 'success': True}
 
 We can use the coordinates returned to extract the faces from the image
 
