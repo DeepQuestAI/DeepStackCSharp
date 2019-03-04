@@ -48,7 +48,7 @@ If using the GPU Version, run ::
         public static async Task makeRequest(){
 
             var request = new MultipartFormDataContent();
-            var image_data = File.OpenRead("image.jpg");
+            var image_data = File.OpenRead("test-image5.jpg");
             request.Add(new StreamContent(image_data),"image",Path.GetFileName("test-image5.jpg"));
             var output = await client.PostAsync("http://localhost:80/v1/vision/scene",request);
             var jsonString = await output.Content.ReadAsStringAsync();
@@ -69,5 +69,5 @@ If using the GPU Version, run ::
 
 Result ::
 
-    {'success': True, 'confidence': 0.7373981, 'label': 'conference_room'}
+    {'success': True, 'confidence': 73.73981, 'label': 'conference_room'}
 

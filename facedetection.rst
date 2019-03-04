@@ -3,8 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. _facedetection:
+
 Face Detection
-==============
+================
 
 The face detection API detects faces and returns their coordinates as well as the gender.
 It functions similarly to the face recognition API except that it does not 
@@ -58,12 +60,6 @@ Also note that the recognition API does not return gender predictions.
             var output = await client.PostAsync("http://localhost:80/v1/vision/face",request);
             var jsonString = await output.Content.ReadAsStringAsync();
             Response response = JsonConvert.DeserializeObject<Response>(jsonString);
-            
-            foreach (var user in response.predictions){
-
-                Console.WriteLine(user.gender);
-
-            }
 
             Console.WriteLine(jsonString);
 
@@ -85,7 +81,7 @@ Result ::
     male
     male
     female
-    {'predictions': [{'y_max': 303, 'gender': 'female', 'confidence': 0.99999213, 'x_min': 534, 'x_max': 629, 'y_min': 174}, {'y_max': 275, 'gender': 'male', 'confidence': 0.6611953, 'x_min': 616, 'x_max': 711, 'y_min': 146}, {'y_max': 259, 'gender': 'male', 'confidence': 0.99884146, 'x_min': 729, 'x_max': 811, 'y_min': 147}, {'y_max': 290, 'gender': 'female', 'confidence': 0.99997365, 'x_min': 471, 'x_max': 549, 'y_min': 190}], 'success': True}
+    {'predictions': [{'y_max': 303, 'gender': 'female', 'confidence': 100, 'x_min': 534, 'x_max': 629, 'y_min': 174}, {'y_max': 275, 'gender': 'male', 'confidence': 99, 'x_min': 616, 'x_max': 711, 'y_min': 146}, {'y_max': 259, 'gender': 'male', 'confidence': 98, 'x_min': 729, 'x_max': 811, 'y_min': 147}, {'y_max': 290, 'gender': 'female', 'confidence': 99, 'x_min': 471, 'x_max': 549, 'y_min': 190}], 'success': True}
 
 We can use the coordinates returned to extract the faces from the image
 
@@ -148,7 +144,7 @@ We can use the coordinates returned to extract the faces from the image
                 image.Mutate(x => x
                 .Crop(crop_region)
                 );
-                image.Save(user.gender + i.ToString() + "_.jpg");
+                image.Save(i.ToString() + "_.jpg");
 
             }
 
